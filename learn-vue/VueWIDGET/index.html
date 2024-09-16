@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUEWIDGET</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="app">
+        <!--Template Injected Here-->
+        <h1>{{message}}</h1>
+        <h2>{{counter}}</h2>
+        <p>{{article}} - {{message}}</p>
+        <img :src="image" alt="Some Picture" style="width: 100px;">
+        <br>
+        <input type="text" placeholder="Type Something..." v-model="message"><br>
+        <input type="text" placeholder="Edit article" v-model="article"><br>
+        <input type="file" placeholder="image" @change="onFileChange">
+        <br>
+        <button @click="increment">Increase</button>
+        <button @click="decrement">Decrease</button>
+    </div>
+</body>
+<script src="./app.js"></script>
+</html>
